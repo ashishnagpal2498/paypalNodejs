@@ -1,11 +1,12 @@
 const express = require('express')
 const ejs = require('ejs')
 const paypal= require('paypal-rest-sdk')
+const config = require('config')
 
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
-    'client_id': 'AarejqzVdh-MaETQfh22P4qHOB3p57x18dekYwLziPNo88_U1neqaup0qn63iQ_PEN2HlYAR4ZhObu6G',
-    'client_secret': 'EE1bCkOj0y5Kj9vt8CRYkG-qGRCfnsRglS3f69yU0Al13vFSzKXT9rOddkr-kruzcvIp7amOJtHcOlwg'
+    'client_id': config.Paypal.client_id,
+    'client_secret': config.Paypal.client_secret
 });
 
 const app = express();

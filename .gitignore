@@ -113,6 +113,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+#Paypal Configration
+config.json
+
 # TypeScript v1 declaration files
 typings/
 
